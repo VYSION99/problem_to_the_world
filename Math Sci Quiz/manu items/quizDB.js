@@ -25,7 +25,7 @@ const maths = [
   },
   {
     questions:
-      "Q1. Find the imageof the point W(2, -3) under a reflection the line y=-1",
+      "Q4. Find the imageof the point W(2, -3) under a reflection the line y=-1",
     a: "A. (2, -1)",
     b: "B. (2 , 1)",
     c: "C. (2 , 3)",
@@ -65,7 +65,7 @@ const maths = [
     ans: "option4",
   },
   {
-    questions: "Q1. What is the square root of 49?",
+    questions: "Q6. What is the square root of 49?",
     a: "A. 16",
     b: "B. 45",
     c: "C. 12",
@@ -74,7 +74,7 @@ const maths = [
   },
   {
     questions:
-      "Q2. If I have a cirle with a radius of 50yds, what is the diameter?",
+      "Q8. If I have a cirle with a radius of 50yds, what is the diameter?",
     a: "A. 25yds",
     b: "B. 314yds",
     c: "C. 100yds",
@@ -83,7 +83,7 @@ const maths = [
   },
   {
     questions:
-      "Q3. What happens to the area of a rectangle when you double the legth of both sides?",
+      "Q9. What happens to the area of a rectangle when you double the legth of both sides?",
     a: "A. Area is 2x",
     b: "B. Area is 4x",
     c: "C. Area is 6x",
@@ -92,16 +92,16 @@ const maths = [
   },
   {
     questions:
-      "Q4. List one dimention of a rectangular prism with the volume of 36ft3?",
+      "Q11. List one dimention of a rectangular prism with the volume of 36ft3?",
     a: "2x4x4.5",
     b: "2x8x5",
     c: "9x6x3",
     d: "7x10x4",
-    ans: "",
+    ans: "option1",
   },
   {
     questions:
-      "Q5. If you are selling 15 c-ds to 3 costomers how many c-d does each customer have?",
+      "Q13. If you are selling 15 c-ds to 3 costomers how many c-d does each customer have?",
     a: "A. 4",
     b: "B. 21",
     c: "C. 5",
@@ -109,7 +109,7 @@ const maths = [
     ans: "option3",
   },
   {
-    questions: "Q 6. Pythagoras theorem states:",
+    questions: "Q16. Pythagoras theorem states:",
     a: "A. The product of the square of lengths hypotenuse, base and perpendicular is equal to the sum of the angles.",
     b: "B. The square of the hypotenuse is equal to the sum of the base and the perpendicular in a right angled triangle.",
     c: "C. The square of the base is equal to the sum of the squares of the other two sides.",
@@ -117,7 +117,7 @@ const maths = [
     ans: "option2",
   },
   {
-    questions: "Q7. Sinθ/cosθ = X, Find X.",
+    questions: "Q17. Sinθ/cosθ = X, Find X.",
     a: "A. Secθ/Tanθ",
     b: "B. Cotθ",
     c: "C. Tanθ",
@@ -126,7 +126,7 @@ const maths = [
   },
   {
     questions:
-      "Q8. A grocer sells 100kg of jaggery partly at 10% profit and partly at 20% profit, gaining 12% on his outlay. How much does he sell at 10% profit ?",
+      "Q18. A grocer sells 100kg of jaggery partly at 10% profit and partly at 20% profit, gaining 12% on his outlay. How much does he sell at 10% profit ?",
     a: "A. 80Kg",
     b: "B. 88Kg",
     c: "C. 75Kg",
@@ -135,7 +135,7 @@ const maths = [
   },
   {
     questions:
-      "Q17.find the value of x in the equations: 2x + 2y =3 and x-y =5/2",
+      "Q14.find the value of x in the equations: 2x + 2y =3 and x-y =5/2",
     a: "A. 1",
     b: "B. 2",
     c: "C. 3",
@@ -160,7 +160,7 @@ const maths = [
   },
   {
     questions:
-      "Q23. Two apples and a coconut cost $3,100.00. An apple and two coconuts cost $2,600.00. Whta is the cost of a coconut.",
+      "Q23. Two apples and a coconut cost $3,100.00. An apple and two coconuts cost $2,600.00. What is the cost of a coconut.",
     a: "A. $520.00",
     b: "B. $700.00",
     c: "C. $1,149.00",
@@ -211,7 +211,7 @@ const maths = [
     ans: "option2",
   },
   {
-    questions: "Q24. Expresss 7.0959, corrcetto three significant figures ",
+    questions: "Q24. Expresss 7.0959, corrcet to three significant figures ",
     a: "A. 7.095",
     b: "B. 7.096",
     c: "C. 7.09",
@@ -271,8 +271,10 @@ const manuItem = async () => {
 
   return math;
 };
-const resultPortal = `<div class="message"></div>
+const resultPortal = `
+          <div class="counter"></div>
+          <div class="message"></div>
           <div class="scores"></div>
-          <div class="try agian">
+          <div class="try_agian">
               <a href="/questionPortal" class="submit">TRY AGAIN</a>  
           </div> `;

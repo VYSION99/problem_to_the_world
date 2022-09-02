@@ -42,10 +42,11 @@ const Answer2 = document.querySelector("#ans2");
 const Answer3 = document.querySelector("#ans3");
 const Answer4 = document.querySelector("#ans4");
 const Answers = document.querySelectorAll(".answers");
-let QuestionCount = 0;
-var QuestionList = maths[QuestionCount];
+let QuestionCount = Math.ceil(Math.random()* 10);
 let answer;
-let scores = 3;
+let scores = 0;
+let count = 0;
+let Qcount = 0;
 const LoadQuestion = () => {
   Question.innerText =maths[QuestionCount].questions;
   Answer1.innerText = maths[QuestionCount].a;
@@ -67,30 +68,31 @@ const getAnswer = () => {
 
 function checkFun() {
   var checkAnswer = getAnswer();
-  if (checkAnswer === QuestionList.ans) {
-    scores++;
-    }
-    
- QuestionCount++;
-
-  if (QuestionCount < maths.length) {
+  if (checkAnswer == maths[QuestionCount].ans) {
+    scores += 3;
+    count++;
+  }
+    QuestionCount++;
+Qcount++
+  if (Qcount <20) {
     LoadQuestion();
   };
-  if (QuestionCount === maths.length) {
+  if (Qcount === 20) {
     var btn = document.querySelector('.bt');
     var next = document.querySelector('.submit');
     next.remove();
     btn.innerHTML = '<button  type="button" class="submit" onclick="result()">Submit</button>';
-
   }
-
+  console.log(scores ,count);
 }
 
 const result = () => {
+  confirm('Do you really want to submit')
   var results = document.querySelector('#resultScore');
   results.innerHTML=resultPortal;
     var messager = document.querySelector('.message');
     var score = document.querySelector('.scores');
+    var counter = document.querySelector('.counter');
     if (scores <= 27) {
         messager.innerHTML = '<div class="message">Ohh!!.. You fail the test please try again later</div>';
         messager.style.color = 'red';
@@ -98,8 +100,7 @@ const result = () => {
  messager.innerHTML ='<div class="message">Wow !! Congratulation!!.. You have passed the test sucessfully</div>';
          messager.style.color = 'lightgreen';
     }
-    score.innerText = `At the end of the test you Scored ${scores / 3*30}%  /100%`;
+  score.innerText = `At the end of the test you Scored ${Math.ceil((scores/3)*5)  }%  /100%`;
+  counter.innerText = `Your Outcome: ${count}  /20`;
+  console.log(results)
 }
-
-//console.log(answer)
-
